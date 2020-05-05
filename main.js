@@ -1,6 +1,6 @@
 var randomNumber = 0;
 var guessCounter = 0;
-var quessedNumbers = [];
+var guessedNumbers = [];
 
 function start(){
     randomNumber = Math.floor(Math.random() * 101);
@@ -25,15 +25,15 @@ function isValidGuess(number){
         return false;
     } else {
         guessedNumbers.push(number);
-        checkIfCorrect();
+        guessCounter++;
+        checkIfCorrect(number);
     }
 }
 
-function checkIfCorrect(){
-    if(guess == randomNumber){
-        guessCounter++;
+function checkIfCorrect(number){
+    if(number == randomNumber){
         document.getElementById("messageBox").innerHTML = "Oikein arvattu! Arvausten lukumäärä: " + guessCounter + ".";
-    } else if (guess > randomNumber) {
+    } else if (number > randomNumber) {
         document.getElementById("messageBox").innerHTML = "Luku on pienempi kuin arvaamasi luku."
         document.getElementById("wrongGuesses").innerHTML = guessedNumbers;
     } else {
