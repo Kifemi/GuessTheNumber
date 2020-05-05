@@ -5,7 +5,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
-<body>
+<body onload="start()">
     
+    <h1>Arvaa luku väliltä 1-100</h1>
+
+    <p>arvaus</p>
+
+    <form>
+        <input type="text" id="guessField">
+        <button type="button" onclick="guessButtonPressed()">
+            arvaa
+        </button>
+    </form>
+    
+    <p id="messageBox"></p>
+    <p>arvatut luvut</p>
+    <p id="wrongGuesses"></p>
+
+
 </body>
+<script src="main.js">
+</script>
 </html>
