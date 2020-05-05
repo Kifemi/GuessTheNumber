@@ -9,20 +9,23 @@
     
     <h1>Arvaa luku väliltä 1-100</h1>
 
-    <p>arvaus</p>
+    <p>Arvaus</p>
 
     <form>
         <input type="text" id="guessField" onfocus="this.value=''">
         <button type="button" onclick="guessButtonPressed()">
-            arvaa
+            Arvaa
         </button>
     </form>
     
     <p id="messageBox"></p>
-    <p>arvatut luvut</p>
+    <p>Arvatut luvut:</p>
     <p id="wrongGuesses"></p>
 
-
+    <div id="newGame">
+        <p>Haluatko pelata uudestaan?</p>
+        <button onclick="reloadPage()">Kyllä</button>
+    </div>
 </body>
 <script src="main.js">
 </script>
