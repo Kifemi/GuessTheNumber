@@ -5,7 +5,7 @@ var guessedNumbers = [];
 function start(){
     randomNumber = Math.floor(Math.random() * 101);
     console.log(randomNumber);
-    hideShow();
+    hideShowReplayButton();
 }
 
 function guessButtonPressed(){
@@ -34,7 +34,7 @@ function isValidGuess(number){
 function checkIfCorrect(number){
     if(number == randomNumber){
         document.getElementById("messageBox").innerHTML = "Oikein arvattu! Arvausten lukumäärä: " + guessCounter + ".";
-        hideShow();
+        hideShowReplayButton();
         return;
     }
     
@@ -50,7 +50,7 @@ function reloadPage(){
     location.reload();
 }
 
-function hideShow(){
+function hideShowReplayButton(){
     var x = document.getElementById("newGame");
     if (x.style.display === "none") {
         x.style.display = "block";
