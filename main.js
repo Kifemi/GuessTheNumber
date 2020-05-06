@@ -4,7 +4,6 @@ var guessedNumbers = [];
 
 function start(){
     randomNumber = Math.floor(Math.random() * 101);
-    console.log(randomNumber);
     hideShowReplayButton();
 }
 
@@ -32,7 +31,7 @@ function isValidGuess(number){
 }
 
 function checkIfCorrect(number){
-    if(number == randomNumber){
+    if (number == randomNumber) {
         document.getElementById("messageBox").innerHTML = "Oikein arvattu! Arvausten lukumäärä: " + guessCounter + ".";
         hideShowReplayButton();
         return;
