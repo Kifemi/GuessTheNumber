@@ -3,7 +3,7 @@ var guessCounter = 0;
 var guessedNumbers = [];
 
 function start(){
-    randomNumber = Math.floor(Math.random() * 101);
+    randomNumber = Math.floor((Math.random() * 100) + 1);
     hideShowReplayButton();
 }
 
